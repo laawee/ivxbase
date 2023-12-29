@@ -1,15 +1,15 @@
 {
   "version": 2,
- "builds": [
-  {
-    "src": ".", // 指定要构建的源代码目录
-    "use": "docker", // 指定使用 Docker 镜像构建
-    "args": { // 指定构建时传递给 Docker 镜像的参数
-      "DOCKERFILE_PATH": "./Dockerfile",
-      "IMAGE_NAME": "ivxbase"
+  "builds": [
+    {
+      "src": ".",
+      "use": "docker",
+      "args": {
+        "DOCKERFILE_PATH": "./Dockerfile",
+        "IMAGE_NAME": "ivxbase"
+      }
     }
-  }
-],
+  ],
   "routes": [
     { "src": "/.*", "dest": "index.js" }
   ]
